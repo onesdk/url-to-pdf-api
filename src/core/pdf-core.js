@@ -36,7 +36,7 @@ async function render(_opts = {}) {
     headless: !config.DEBUG_MODE,
     ignoreHTTPSErrors: opts.ignoreHttpsErrors,
     executablePath: config.PUPPETEER_CHROMIUM_PATH || undefined,
-    args: ['--disable-gpu', '--no-sandbox', '--disable-setuid-sandbox'],
+    args: ['--disable-gpu'],
     sloMo: config.DEBUG_MODE ? 250 : undefined,
   });
   const page = await browser.newPage();
